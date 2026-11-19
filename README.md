@@ -1,3 +1,4 @@
+@'
 # Log Inspector
 
 A lightweight Python application that analyses
@@ -9,7 +10,7 @@ application log files and counts log severity levels.
 - Supports uppercase and lowercase severity labels.
 - Recognises plain and bracketed severity labels.
 - Counts at most one severity per line.
-- Ignores lines without a recognised leading label.
+- Ignores unrecognised log records.
 - Supports iterable inputs.
 - Reads log files using UTF-8 encoding.
 - Includes automated pytest tests.
@@ -18,10 +19,10 @@ application log files and counts log severity levels.
 
 ```text
 log-inspector/
-├── .gitignore
-├── README.md
-├── requirements-dev.txt
-└── log-inspector/
-    ├── log_inspector.py
-    └── tests/
-        └── test_log_inspector.py
+|-- .gitignore
+|-- README.md
+|-- requirements-dev.txt
+`-- log-inspector/
+    |-- log_inspector.py
+    `-- tests/
+        `-- test_log_inspector.py
