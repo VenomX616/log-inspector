@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 
 LOG_PROJECT_DIR = PROJECT_ROOT / "log-inspector"
-SAMPLE_LOG_PATH = BASE_DIR / "sample.log"
+SAMPLE_LOG_PATH = BASE_DIR / "sample.txt"
 
 sys.path.insert(0, str(LOG_PROJECT_DIR))
 
