@@ -153,3 +153,15 @@ def test_summarize_log_file_propagates_missing_file_error(tmp_path: Path) -> Non
 
     with pytest.raises(FileNotFoundError):
         summarize_log_file(missing_file)
+
+def test_summarize_log_file_reads_utf8_bom(tmp_path):
+    log_file = tmp_path / "bom.log"
+
+    log_file.write_text(
+        "[INFO] Application started\n",
+        encoding="utf-8-sig"
+    )
+
+    result = summarize_log_file(log_file)
+
+    assert result["INFO"] == 1

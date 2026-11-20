@@ -32,5 +32,5 @@ def summarize_log_file(path: str | Path) -> dict[str, int]:
 
     File access and decoding errors are propagated to the caller.
     """
-    with Path(path).open(encoding="utf-8") as log_file:
+    with Path(path).open(encoding="utf-8-sig") as log_file:
         return summarize_log_lines(log_file)

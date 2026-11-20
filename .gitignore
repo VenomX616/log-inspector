@@ -23,3 +23,10 @@ htmlcov/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Local RAG database
+llm-basics/chroma_db/
+
+# Python cache
+__pycache__/
+*.py[cod]
